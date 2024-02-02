@@ -1,0 +1,26 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Dependency directories
+/lib/
+/vendor/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# Compiled binary addons
+/build/Release/
+
+# OS generated files
+.DS_Store
+Thumbs.db
