@@ -11,9 +11,7 @@ import ColabPage from "./pages/ColabPage";
 
 function App() {
   return (
-    // <div>
-    //   <LandingPage />
-    // </div>
+
     <>
       <BrowserRouter>
         <Routes>

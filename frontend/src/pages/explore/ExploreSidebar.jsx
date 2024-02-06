@@ -1,7 +1,8 @@
 import React from 'react'
-import { Bell, BellRing, Bookmark, Brain, ChevronDown, Clock, DraftingCompass, Search, Settings, Settings2, User, Users2,} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Bell, Bookmark, Brain, ChevronDown, Clock, DraftingCompass, Search, Settings, User, Users2,} from 'lucide-react';
 import {
-    DropdownMenu,
+  DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuLabel,
@@ -17,7 +18,6 @@ import {
 import { Input } from '../../Components/ui/input';
 import { Separator } from '../../Components/ui/separator';
 import ListCard from '../../Components/core/ListCard';
-import { Link } from 'react-router-dom';
 
 const ExploreSidebar = () => {
   return (
@@ -47,7 +47,7 @@ const ExploreSidebar = () => {
         <section className='py-2'>
             <div className='relative w-full h-fit px-1'>
             <Search size={16} className='absolute top-2 left-3 text-neutral-600'/>
-            <Input placeholder="Search your codes & discus.." className='h-8 pl-8 text-xs text-neutral-600 placeholder:text-[10px] placeholder:text-neutral-400'/>
+            <Input placeholder="Search your codes & discus.." className='h-8 pl-8 text-xs text-neutral-600 placeholder:text-[10px] placeholder:text-neutral-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'/>
             </div>
             <Separator  className='my-2'/>
             <section className='flex flex-col h-full'>
@@ -91,12 +91,9 @@ const ExploreSidebar = () => {
                       <ListCard />
                     </AccordionContent>
                   </AccordionItem>
-                  
                 </Accordion>
-               
             </section>
         </section>
-        
       </aside>
     </>
   )
