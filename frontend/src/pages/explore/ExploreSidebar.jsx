@@ -23,6 +23,7 @@ const ExploreSidebar = () => {
   return (
     <>
     <aside className='flex flex-col w-72 md:w-64 md:min-w-52 xl:w-72 h-full py-px px-1 relative'>
+          {/*User details sections */}
         <div className='h-14 w-full flex justify-between items-center'>
             <DropdownMenu>
                 <DropdownMenuTrigger  className='flex gap-2 items-center text-xs font-semibold hover:underline hover:bg-slate-50 p-1.5 rounded-md'>   
@@ -31,7 +32,7 @@ const ExploreSidebar = () => {
                 alt='profile'
                 className='h-8 w-8 rounded-full' 
                 />
-                    {'Someone#422'}
+                    {'Someone#422'} {/* Authentication-UserName */}
                     <ChevronDown className='h-5 w-5'/>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className='ml-14 w-40 '>
@@ -45,11 +46,13 @@ const ExploreSidebar = () => {
             <Bell className=' fill-black h-7 w-7 p-1.5 cursor-pointer hover:bg-slate-50 rounded-md'/>
         </div>
         <section className='py-2'>
+          {/* Local search */}
             <div className='relative w-full h-fit px-1'>
             <Search size={16} className='absolute top-2 left-3 text-neutral-600'/>
             <Input placeholder="Search your codes & discus.." className='h-8 pl-8 text-xs text-neutral-600 placeholder:text-[10px] placeholder:text-neutral-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'/>
             </div>
             <Separator  className='my-2'/>
+            {/* Navigation info */}
             <section className='flex flex-col h-full'>
                 <Accordion type="single" collapsible defaultValue="item-1" className='p-2 overflow-y-scroll'>
                   <AccordionItem  value="item-1" className='border-none' >

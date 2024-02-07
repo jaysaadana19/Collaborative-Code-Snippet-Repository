@@ -33,10 +33,11 @@ const ListingPost = () => {
           />
           </aside>
           <div className='flex gap-4'>
-            <Button className='hidden lg:flex items-center justify-center  h-12 w-40 bg-blue-400 text-white rounded-lg'>Add a snippet</Button>
-            <Button className='lg:hidden flex items-center justify-center  h-12 w-12 bg-blue-400 text-white rounded-lg'><Plus /></Button>
-            <Button className='hidden lg:flex  items-center justify-center h-12 w-40 bg-green-400 text-white rounded-lg'>Collaborate</Button>
-            <Button className='lg:hidden flex  items-center justify-center h-12 w-12 bg-green-400 text-white rounded-lg'><Combine /></Button>
+            {/* TODO: Can be optimized */}
+            <Button className='hidden lg:flex items-center justify-center  h-12 w-40 bg-blue-400 hover:bg-blue-300 text-white rounded-lg'>Add a snippet</Button>
+            <Button className='lg:hidden flex items-center justify-center  h-12 w-12 bg-blue-400 hover:bg-blue-300 text-white rounded-lg'><Plus /></Button>
+            <Button className='hidden lg:flex  items-center justify-center h-12 w-40 bg-green-400 hover:bg-green-300 text-white rounded-lg'>Collaborate</Button>
+            <Button className='lg:hidden flex  items-center justify-center h-12 w-12 bg-green-400 hover:bg-green-300 text-white rounded-lg'><Combine /></Button>
           </div>
           </div>
              <div className='flex flex-col gap-8 md:gap-0 h-full min-w-fit py-8 px-2 overflow-y-scroll'>
@@ -49,6 +50,8 @@ const ListingPost = () => {
                   />
                 ))
               }
+
+              {/*Pagination */}
           <div className='pb-12 -mt-4'>
               <SnippetPagination 
               snippetDatalength={snippetsData.length}
@@ -67,14 +70,13 @@ const ListingPost = () => {
 
 export default ListingPost
 
-const SnippetPagination = (
- { snippetDatalength,
+const SnippetPagination = ({ 
+  snippetDatalength,
   snippetsPerPage,
   currentPage,
   setCurrentPage,
-isLastPage
-}
-) => {
+  isLastPage,
+}) => {
   let pages = [];
   for(let i = 1; i <= Math.ceil(snippetDatalength / snippetsPerPage); i++){
     pages.push(i)
@@ -94,13 +96,15 @@ isLastPage
     <>
     <Pagination>
       <PaginationContent className='space-x-2 mr-auto md:ml-12'>
+
         <PaginationItem>
-          <PaginationPrevious className={cn('hover:bg-blue-300 border h-8',currentPage === 1 ? 'cursor-not-allowed':'cursor-pointer')}  onClick={() => handlePrevClick()}/>
+          <PaginationPrevious className={cn('hover:bg-blue-300 hover:text-white border h-8',currentPage === 1 ? 'cursor-not-allowed':'cursor-pointer')}  onClick={() => handlePrevClick()}/>
         </PaginationItem>
 
         <PaginationItem className=''>
-          <PaginationNext className={cn('hover:bg-blue-300 border h-8',isLastPage ? 'cursor-not-allowed':'cursor-pointer')} onClick={() => handleNextClick()} />
+          <PaginationNext className={cn('hover:bg-blue-300 hover:text-white border h-8',isLastPage ? 'cursor-not-allowed':'cursor-pointer')} onClick={() => handleNextClick()} />
         </PaginationItem>
+
       </PaginationContent>
     </Pagination>
     </>
