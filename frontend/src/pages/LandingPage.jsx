@@ -25,6 +25,12 @@ function Navbar() {
         >
           Contact Us
         </a>
+        <a
+          href="/explore"
+          className="text-xl text-gray-800 hover:text-indigo-600 transition duration-100"
+        >
+          Explore
+        </a>
         <Button>Join CollabCode</Button>
         <Button>Log in</Button>
       </div>
@@ -48,6 +54,12 @@ function Navbar() {
                   className="text-gray-800 hover:text-indigo-600 transition duration-100 text-left text-xl"
                 >
                   Contact Us
+                </a>
+                <a
+                  href="/explore"
+                  className="text-gray-800 hover:text-indigo-600 transition duration-100 text-left text-xl"
+                >
+                  explore
                 </a>
                 <Button>Join CollabCode</Button>
                 <Button>Log in</Button>
