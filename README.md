@@ -25,9 +25,10 @@ Thank you for considering contributing to our project! Follow the steps below to
    - Open a new terminal window, navigate to the `frontend` directory, and start the React app:
      ```
      cd frontend
-     npm start
+     npm install
+     npm run dev
      ```
-     This will start the frontend on `localhost:3000`. You'll see a basic React page welcoming you to the project.
+     This will start the frontend on `localhost:5173`.
 
 4. **Contribution Encouragement:**
    - We encourage developers of all levels to contribute to this collaborative platform.
