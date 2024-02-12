@@ -6,6 +6,7 @@ import ListingPost from "./pages/ListingPost";
 import RecentPage from "./pages/RecentPage";
 import SavesPage from "./pages/Savespage";
 import ColabPage from "./pages/ColabPage";
+import AddSnippet from "./pages/AddSnippet";
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/explore/recents' element={<RecentPage />}/>
           <Route path='/explore/saves' element={<SavesPage />}/>
           <Route path='/explore/colab' element={<ColabPage />}/>
+          <Route path='/explore/add-snippet' element={<AddSnippet />}/>
           </Route>
         </Routes>
       </BrowserRouter>
