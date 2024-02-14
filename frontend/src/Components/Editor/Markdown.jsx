@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect } from "react";
 import { BubbleMenu, EditorContent, FloatingMenu, useEditor } from "@tiptap/react";
 import { HardBreak } from "@tiptap/extension-hard-break";
@@ -8,12 +7,11 @@ import {
   BoldIcon,
   Italic,
   Code,
-  Heading1,
-  Heading2,
   List,
   ListOrdered,
   StrikethroughIcon,
   Code2Icon,
+  Heading,
 } from "lucide-react";
 import { Label } from "../ui/label";
 
@@ -73,15 +71,9 @@ const Markdown = ({ editorState, setEditorState }) => {
   const FloatingMenuFunctions = [
     {
       title: `heading`,
-      attribute: { level: 1 },
-      onFunction: () => editor?.chain().focus().toggleHeading({ level: 1 }).run(),
-      icon: <Heading1 className="w-4 h-4" />,
-    },
-    {
-      title: `heading`,
-      attribute: { level: 2 },
-      onFunction: () => editor?.chain().focus().toggleHeading({ level: 2 }).run(),
-      icon: <Heading2 className="w-4 h-4" />,
+      attribute: { level: 3 },
+      onFunction: () => editor?.chain().focus().toggleHeading({ level: 3 }).run(),
+      icon: <Heading className="w-4 h-4" />,
     },
     {
       title: `codeBlock`,
@@ -103,10 +95,10 @@ const Markdown = ({ editorState, setEditorState }) => {
 
   return (
     <>
-      <main className=" outline-none focus:ring rounded-lg p-3  dark:text-white bg-white text-black placholder:text-gray-400 text-lg w-full mb-2 max-w-full ">
+      <main className="rounded-lg py-1 md:px-3 shadow-sm dark:text-white text-black placholder:text-gray-400 border  border-neutral-400 bg-white text-lg w-full max-w-full ">
         {editor && (
           <BubbleMenu className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor}>
-            <div className="flex gap-1 bg-white px-4 py-1 text-black rounded-sm">
+            <div className=" gap-1 bg-white px-4 py-1 text-black rounded-sm hidden md:flex">
               {BubbleMenuFunctions.length > 0 &&
                 BubbleMenuFunctions.map((func, idx) => (
                   <button
@@ -131,7 +123,7 @@ const Markdown = ({ editorState, setEditorState }) => {
 
         {editor && (
           <FloatingMenu className="floating-menu" tippyOptions={{ duration: 100 }} editor={editor}>
-            <div className="flex gap-1 bg-white px-4 py-1 text-black rounded-sm">
+            <div className="gap-1 bg-white px-4 py-1 text-black rounded-sm hidden md:flex">
               {FloatingMenuFunctions.length > 0 &&
                 FloatingMenuFunctions.map((func, idx) => (
                   <button
@@ -155,7 +147,7 @@ const Markdown = ({ editorState, setEditorState }) => {
         )}
 
         {editor && <EditorMenubar editor={editor} />}
-        <EditorContent className="prose dark:prose-invert mt-4" editor={editor} />
+        <EditorContent className="prose dark:prose-invert  px-3 min-w-full overflow-x-hidden " editor={editor} />
       </main>
     </>
   );

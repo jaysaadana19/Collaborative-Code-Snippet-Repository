@@ -1,22 +1,16 @@
 import Snippet from "../models/snippet.model.js";
-
-export const test = (req, res) => {
-    res.json(
-        { message: "hello" },
-    )
-}
 export const createSnippet = async(req, res) => {
     try {
-        console.log(req.body)
         const snippet = await Snippet.create({
-            title: 'ssasd',
-            description:'sa',
-            tags: ['wew','eq'],
-            category: 'dvadv',
-            language: 'avdad'
+            title: req.body.title,
+            snippet_with_context:req.body.snippet_with_context,
+            tags: req.body.tags,
+            category: req.body.category,
+            language: req.body.language
         });
 
         return res.status(201).json(snippet)
+
     } catch (error) {
         next(error)
     }

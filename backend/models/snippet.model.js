@@ -5,7 +5,7 @@ const snippetSchema = mongoose.Schema({
         type: String,
         require: true,
     },
-    description: {
+    snippet_with_context: {
         type: String,
         require: true,
     },

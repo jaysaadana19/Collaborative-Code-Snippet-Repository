@@ -3,12 +3,7 @@ import {
   Bold,
   Code,
   Code2Icon,
-  Heading1,
-  Heading2,
   Heading3,
-  Heading4,
-  Heading5,
-  Heading6,
   Italic,
   List,
   ListOrdered,
@@ -92,7 +87,7 @@ const EditorMenubar = ({ editor }) => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap rounded-lg gap-2 p-2 -mt-1 sticky -top-1 bg-white z-10">
         {MenuBarFunctions.length > 0 &&
           MenuBarFunctions.map((menu, idx) => (
             <button
@@ -107,10 +102,10 @@ const EditorMenubar = ({ editor }) => {
               className={
                 editor.isActive(menu.title, menu.attribute)
                   ? "is-active rounded-sm p-0.5 hover:bg-white/80 hover:text-black"
-                  : "rounded-sm p-0.5 hover:bg-white/80 hover:text-black"
+                  : "rounded-sm p-0.5 hover:bg-blue-100 hover:text-black"
               }
             >
-              <menu.icon className="w-4 h-4" />
+              <menu.icon className="w-3 h-3 sm:h-4 sm:w-4" />
             </button>
           ))}
       </div>

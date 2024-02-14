@@ -1,5 +1,5 @@
 
-import ExploreSidebar from './exploreSidebar';
+import ExploreSidebar from './ExploreSidebar';
 import MobileSidebar from './MobileSidebar';
 
 import { Outlet } from 'react-router-dom';

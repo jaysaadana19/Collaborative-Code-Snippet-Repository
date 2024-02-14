@@ -5,15 +5,14 @@ import {
   PaginationItem,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination"
+} from "../components/ui/pagination"
 import { Combine, Plus, Search } from 'lucide-react';
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input';
+import { Input } from '../components/ui/input';
 import { cn } from '@/lib/utils';
 
-import PostCard from '@/components/core/PostCard';
 import { snippetsData } from '@/lib/snippetsData';
 import { Link } from 'react-router-dom';
+import PostCard from '@/components/core/PostCard';
 
 const ListingPost = () => {
   const [currentPage, setCurrentPage] = useState(1)

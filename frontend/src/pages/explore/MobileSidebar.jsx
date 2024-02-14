@@ -2,8 +2,8 @@ import {
     Sheet,
     SheetContent,
     SheetTrigger,
-  } from "@/components/ui/sheet"
-import ExploreSidebar from "./exploreSidebar"
+  } from "../../components/ui/sheet"
+import ExploreSidebar from "./ExploreSidebar"
 import { AlignLeft } from "lucide-react"
   
 const MobileSidebar = () => {
