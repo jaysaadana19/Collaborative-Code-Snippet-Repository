@@ -78,7 +78,7 @@ const SnippetForm = () => {
           category: data.category,
           language: data.language
         })
-        if(!resp.status === 201){
+        if(!resp.data){
           toast.error('Failed to create a post')
         }
         console.log(resp.data)
