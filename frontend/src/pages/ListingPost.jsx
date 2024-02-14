@@ -35,8 +35,8 @@ const ListingPost = () => {
           <div className='flex gap-4'>
             {/* TODO: Can be optimized */}
             <Link to={'add-snippet'} className='hidden lg:flex items-center justify-center  h-12 w-40 bg-blue-400 hover:bg-blue-300 text-white rounded-lg'>Add a snippet</Link>
-            <Link to={'colab'} className='lg:hidden flex items-center justify-center  h-12 w-12 bg-blue-400 hover:bg-blue-300 text-white rounded-lg'><Plus /></Link>
-            <Link to={'add-snippet'} className='hidden lg:flex  items-center justify-center h-12 w-40 bg-green-400 hover:bg-green-300 text-white rounded-lg'>Collaborate</Link>
+            <Link to={'add-snippet'} className='lg:hidden flex items-center justify-center  h-12 w-12 bg-blue-400 hover:bg-blue-300 text-white rounded-lg'><Plus /></Link>
+            <Link to={'colab'} className='hidden lg:flex  items-center justify-center h-12 w-40 bg-green-400 hover:bg-green-300 text-white rounded-lg'>Collaborate</Link>
             <Link to={'colab'} className='lg:hidden flex  items-center justify-center h-12 w-12 bg-green-400 hover:bg-green-300 text-white rounded-lg'><Combine /></Link>
           </div>
           </div>

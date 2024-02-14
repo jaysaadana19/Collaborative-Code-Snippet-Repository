@@ -5,9 +5,7 @@ import { X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const InputTag = ((props) => {
-
     const { placeholder, tags, setTags, className } = props;
-
     const [inputValue, setInputValue] = useState('');
     const inputRef = useRef();
 
@@ -30,7 +28,6 @@ const InputTag = ((props) => {
     const removeTag = (tagToRemove) => {
         setTags(tags.filter((tag) => tag !== tagToRemove));
     };
-console.log(tags.length)
     return (
         <div>
             <div className={`flex flex-wrap gap-2 rounded-md ${tags.length !== 0 && 'mb-3'}`}>
@@ -64,4 +61,4 @@ console.log(tags.length)
 
 InputTag.displayName = 'InputTag';
 
-export { InputTag };
+export default InputTag;

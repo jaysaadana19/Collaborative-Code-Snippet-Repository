@@ -8,10 +8,10 @@ export const createSnippet = async(req, res) => {
             category: req.body.category,
             language: req.body.language
         });
-
-        return res.status(201).json(snippet)
+        
+        return res.status(201).json({snippet})
 
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
