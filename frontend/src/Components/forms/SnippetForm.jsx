@@ -45,8 +45,8 @@ const SnippetForm = () => {
    {/* Form Schema using zod */}  
    
     const FormSchema = z.object({
-      title: z.string().min(2, {
-        message: "Username must be at least 2 characters."}),
+      title: z.string().min(8, {
+        message: "Username must be at least 8 characters."}),
       language: z.string({
         required_error: "Please select a language."}),
       category: z.string({
@@ -65,6 +65,11 @@ const SnippetForm = () => {
 
     const onSubmit = async(data) => {
       try {
+
+        if(editorState.replace(/<[^>]*>/g,'').length < 8){
+          toast('Snippet field must contain a least 8 characters.')
+          return
+        }
         setLoading(true)
         const resp = await axios.post('/api/snippet/create', {
           title: data.title,
