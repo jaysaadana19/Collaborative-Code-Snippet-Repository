@@ -7,6 +7,7 @@ import RecentPage from "./pages/RecentPage";
 import SavesPage from "./pages/Savespage";
 import ColabPage from "./pages/ColabPage";
 import Login from "./pages/loginPage";
+import ScrollRevealComponent from "./ScrollRevealComponent";
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 					<Route path='/login' element={<Login />} />
 				</Routes>
 			</BrowserRouter>
+			<ScrollRevealComponent />
 		</>
 	);
 }
