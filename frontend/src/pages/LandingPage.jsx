@@ -3,7 +3,7 @@ import {
   SheetClose,
   SheetContent,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "../components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Github, Menu } from "lucide-react";
 

@@ -8,16 +8,16 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-  } from "../../Components/ui/dropdown-menu"
+  } from "../../components/ui/dropdown-menu"
   import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-  } from "@/components/ui/accordion"
-import { Input } from '../../Components/ui/input';
-import { Separator } from '../../Components/ui/separator';
-import ListCard from '../../Components/core/ListCard';
+  } from "../../components/ui/accordion"
+import { Input } from '../../components/ui/input';
+import { Separator } from '../../components/ui/separator';
+import ListCard from '../../components/core/ListCard';
 
 const ExploreSidebar = () => {
   return (
