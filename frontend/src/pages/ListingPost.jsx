@@ -5,14 +5,14 @@ import {
   PaginationItem,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination"
+} from "../components/ui/pagination"
 import { Combine, Plus, Search } from 'lucide-react';
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input';
+import { Input } from '../components/ui/input';
 import { cn } from '@/lib/utils';
 
-import PostCard from '@/components/core/PostCard';
 import { snippetsData } from '@/lib/snippetsData';
+import { Link } from 'react-router-dom';
+import PostCard from '@/components/core/PostCard';
 
 const ListingPost = () => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -34,10 +34,10 @@ const ListingPost = () => {
           </aside>
           <div className='flex gap-4'>
             {/* TODO: Can be optimized */}
-            <Button className='hidden lg:flex items-center justify-center  h-12 w-40 bg-blue-400 hover:bg-blue-300 text-white rounded-lg'>Add a snippet</Button>
-            <Button className='lg:hidden flex items-center justify-center  h-12 w-12 bg-blue-400 hover:bg-blue-300 text-white rounded-lg'><Plus /></Button>
-            <Button className='hidden lg:flex  items-center justify-center h-12 w-40 bg-green-400 hover:bg-green-300 text-white rounded-lg'>Collaborate</Button>
-            <Button className='lg:hidden flex  items-center justify-center h-12 w-12 bg-green-400 hover:bg-green-300 text-white rounded-lg'><Combine /></Button>
+            <Link to={'add-snippet'} className='hidden lg:flex items-center justify-center  h-12 w-40 bg-blue-400 hover:bg-blue-300 text-white rounded-lg'>Add a snippet</Link>
+            <Link to={'add-snippet'} className='lg:hidden flex items-center justify-center  h-12 w-12 bg-blue-400 hover:bg-blue-300 text-white rounded-lg'><Plus /></Link>
+            <Link to={'colab'} className='hidden lg:flex  items-center justify-center h-12 w-40 bg-green-400 hover:bg-green-300 text-white rounded-lg'>Collaborate</Link>
+            <Link to={'colab'} className='lg:hidden flex  items-center justify-center h-12 w-12 bg-green-400 hover:bg-green-300 text-white rounded-lg'><Combine /></Link>
           </div>
           </div>
              <div className='flex flex-col gap-8 md:gap-0 h-full min-w-fit py-8 px-2 overflow-y-scroll'>
